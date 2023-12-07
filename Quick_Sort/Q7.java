@@ -29,7 +29,7 @@ class Pi extends Ge{
 		a[i+1] = a[h];
 		a[h] = t;
 		
-		return i;
+		return i+1;
 	}
 	void pivot(int a[],int l,int h) {
 		if(l<h) {

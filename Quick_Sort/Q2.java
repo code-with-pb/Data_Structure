@@ -26,7 +26,7 @@ public class Q2 {
 		a[h] = t;
 				
 		
-		return i;
+		return i+1;
 	}
 	public static void devide(int a[],int l,int h) {
 		if(l<h) {

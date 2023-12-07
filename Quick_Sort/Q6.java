@@ -16,7 +16,7 @@ public class Q6 {
 		a[i+1] = a[h];
 		a[h] = s;
 		
-		return i;
+		return i+1;
 	}
 	static void pivot(int a[],int l,int h) {
 		if(l<h) {

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Bubble_Sort"/>
+	<classpathentry kind="src" path="Selection_Sort"/>
+	<classpathentry kind="src" path="Insertion_Sort"/>
+	<classpathentry kind="src" path="Stack"/>
+	<classpathentry kind="src" path="Quick_Sort"/>
+	<classpathentry kind="src" path="Linear/Sequential_Search"/>
+	<classpathentry kind="src" path="Binary_Search"/>
+	<classpathentry kind="src" path="Merge_Sort"/>
+	<classpathentry kind="src" path="Inheritance"/>
+	<classpathentry kind="src" path="Inheritance_Stack"/>
+	<classpathentry kind="src" path="Reverse_&amp;_Add_Last"/>
+	<classpathentry kind="src" path="Queue"/>
+	<classpathentry kind="src" path="Circular_Queue"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -13,12 +13,12 @@ class stack{
 	}
 	static class Stack{
 		public static Node head;
-		public static boolean isEmpty() {
+		public static boolean isEmptyy() {
 			return head == null;
 		}
 		public static void push(int data) {
 			Node nd = new Node(data);
-			if(isEmpty()) {
+			if(isEmptyy()) {
 				head = nd;
 				return;
 			}
@@ -26,7 +26,7 @@ class stack{
 			head = nd;
 		}
 		public static int pop() {
-			if(isEmpty()) {
+			if(isEmptyy()) {
 				return -1;
 			}
 			int top = head.data;
@@ -34,7 +34,7 @@ class stack{
 			return top;
 		}
 		public static int peek() {
-			if(isEmpty()) {
+			if(isEmptyy()) {
 				return -1;
 			}
 			return head.data;
@@ -44,7 +44,7 @@ class stack{
 class Arrl2{
 	static class Stackk{
 		static ArrayList<Integer> list = new ArrayList<>();
-		public static boolean isEmpty() {
+		public static boolean isEmpt() {
 			return list.size() == 0;
 		}
 		public static void push(int data) {
@@ -52,7 +52,7 @@ class Arrl2{
 			return;
 		}
 		public static int pop() {
-			if(isEmpty()) {
+			if(isEmpt()) {
 				return -1;
 			}
 			int top = list.get(list.size()-1);
@@ -60,7 +60,7 @@ class Arrl2{
 			return top;
 		}
 		public static int peek() {
-			if(isEmpty()) {
+			if(isEmpt()) {
 				return -1;
 			}
 			return list.get(list.size()-1);
@@ -95,7 +95,7 @@ public class HIS2 {
 						o.push(7);
 						o.push(8);
 						
-						while(!o.isEmpty()) {
+						while(!o.isEmpt()) {
 							System.out.print(o.peek()+" ");
 							o.pop();
 						}

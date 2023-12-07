@@ -25,7 +25,7 @@ class ArrayL{
 		}
 	}
 }
-class Stack{
+class tack{
 	static class Node{
 		int data;
 		Node next;
@@ -68,10 +68,10 @@ public class HIS1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n,i,k,j;
-		Scanner sc = new Scanner(System.in);
-		System.out.print("Length of Stack: ");
-		k = sc.nextInt();
+		stack s = new stack();
+		
+		s.push(10);
+		
 		
 		
 	}
