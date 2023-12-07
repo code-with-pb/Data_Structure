@@ -1,23 +1,23 @@
 import java.util.*;
 import java.util.Stack;
 
-class sta {
+class stk{
 	static class Node{
 		int data;
 		Node next;
-		public Node(int data) {
+		Node(int data){
 			this.data = data;
 			next = null;
 		}
 	}
 	static class Stack{
 		public static Node head;
-		public static boolean em() {
+		public static boolean isEmpty() {
 			return head == null;
 		}
 		public static void push(int data) {
 			Node nd = new Node(data);
-			if(em()) {
+			if(isEmpty()) {
 				head = nd;
 				return;
 			}
@@ -25,7 +25,7 @@ class sta {
 			head = nd;
 		}
 		public static int pop() {
-			if(em()) {
+			if(isEmpty()) {
 				return -1;
 			}
 			int t = head.data;
@@ -33,94 +33,74 @@ class sta {
 			return t;
 		}
 		public static int peek() {
-			if(em()) {
+			if(isEmpty()) {
 				return -1;
 			}
 			return head.data;
 		}
 	}
 }
-class ArrayL5{
-	static class Arr{
-		static ArrayList<Integer> list = new ArrayList<>();
-		public static boolean em() {
-			return list.size() == -1;
+class str{
+	static class Stack{
+		static ArrayList<Integer> l = new ArrayList<>();
+		public static boolean isEmpty() {
+			return l.size() == 0;
 		}
 		public static void push(int data) {
-			list.add(data);
+			l.add(data);
 		}
 		public static int pop() {
-			if(em()) {
+			if(isEmpty()) {
 				return -1;
 			}
-			int t = list.get(list.size()-1);
-			list.remove(list.size()-1);
+			int t = l.get(l.size()-1);
+			l.remove(l.size()-1);
 			return t;
 		}
 		public static int peek() {
-			if(em()) {
+			if(isEmpty()) {
 				return -1;
 			}
-			return list.get(list.size()-1);
+			return l.get(l.size()-1);
 		}
 	}
 }
-public class HIS5 {
-	void pd(int data,Stack<Integer> s) {
+class re{
+	public static void pd(int data, Stack<Integer> s) {
 		if(s.isEmpty()) {
 			s.push(data);
-			return;
 		}
 		int t = s.pop();
 		pd(data, s);
 		s.push(t);
 	}
-	void rever(Stack<Integer>s) {
+	public static void reverse(Stack<Integer> s) {
 		if(s.isEmpty()) {
 			return;
 		}
 		int t = s.pop();
-		rever(s);
+		reverse(s);
 		pd(t, s);
 	}
+}
+public class HIS7 {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		sta.Stack s = new sta.Stack();
+		//stk.Stack s = new stk.Stack();
+		//str.Stack s = new str.Stack();
+		Stack<Integer> s = new Stack<>();
 		
 		s.push(10);
 		s.push(20);
 		s.push(30);
+		s.push(40);
 		
-		while(!s.em()) {
-			System.out.print(s.peek()+" ");
-			s.pop();
-			
-		}
+		re.reverse(s);
+		re.pd(55, s);
 		
-		ArrayL5.Arr a = new ArrayL5.Arr();
-		
-		a.push(10);
-		s.push(20);
-		a.push(30);
-		
-		while(!a.em()) {
-			System.out.print(a.peek()+" ");
-			a.pop();
-		}
-		
-		Stack sc = new Stack();
-		
-		sc.push(10);
-		sc.push(20);
-		sc.push(30);
-		
-		HIS5 h = new HIS5();
-		
-		//h.pd(10, s);
-		//h.rever(s);
-		
-		while(!sc.isEmpty()) {
-			System.out.print(sc.peek()+" ");
+		while(!s.isEmpty()) {
+			System.out.println(s.peek());
 			s.pop();
 		}
 	}

@@ -1,8 +1,7 @@
 import java.util.*;
-import java.util.Stack;
 
-public class ALS5 {
-	public static void pd(int data, Stack<Integer> s) {
+public class ALS8 {
+	static void pd(int data,Stack<Integer> s) {
 		if(s.isEmpty()) {
 			s.push(data);
 			return;
@@ -11,28 +10,28 @@ public class ALS5 {
 		pd(data, s);
 		s.push(t);
 	}
-	public static void re(Stack<Integer> s) {
+	static void reverse(Stack<Integer> s) {
 		if(s.isEmpty()) {
 			return;
 		}
 		int t = s.pop();
-		re(s);
+		reverse(s);
 		pd(t, s);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Stack s = new Stack();
+		Stack<Integer> s = new Stack<>();
+		
 		s.push(10);
 		s.push(20);
 		s.push(30);
-		s.push(40);
+		s.push(35);
 		
-		pd(50, s);
-		
-		re(s);
+		pd(55, s);
+		reverse(s);
 		
 		while(!s.isEmpty()) {
-			System.out.print(s.peek()+" ");
+			System.out.println(s.peek());
 			s.pop();
 		}
 	}

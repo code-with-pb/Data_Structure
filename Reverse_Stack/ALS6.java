@@ -1,13 +1,14 @@
 import java.util.*;
+import java.util.Stack;
 
 public class ALS6 {
-	public static void pd(int d ,Stack<Integer> s) {
+	public static void pd(int data, Stack<Integer> s) {
 		if(s.isEmpty()) {
-			s.push(d);
+			s.push(data);
 			return;
 		}
 		int t = s.pop();
-		pd(d, s);
+		pd(data, s);
 		s.push(t);
 	}
 	public static void re(Stack<Integer> s) {
@@ -20,21 +21,20 @@ public class ALS6 {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Stack<Integer> s = new Stack<>();
-		
+		Stack s = new Stack();
 		s.push(10);
 		s.push(20);
 		s.push(30);
+		s.push(40);
 		
-		pd(40, s);
+		pd(50, s);
 		
 		re(s);
 		
 		while(!s.isEmpty()) {
-			System.out.println(s.peek());
-			s.pop();	
+			System.out.print(s.peek()+" ");
+			s.pop();
 		}
-		
 	}
 
 }

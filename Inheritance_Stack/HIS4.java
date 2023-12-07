@@ -62,7 +62,7 @@ public class HIS4 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Stack s = new Stack();
+		Stacc4.Stack s = new Stacc4.Stack();
 		
 		s.push(10);
 		s.push(20);

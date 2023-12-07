@@ -10,9 +10,14 @@
 	<classpathentry kind="src" path="Merge_Sort"/>
 	<classpathentry kind="src" path="Inheritance"/>
 	<classpathentry kind="src" path="Inheritance_Stack"/>
-	<classpathentry kind="src" path="Reverse_&amp;_Add_Last"/>
 	<classpathentry kind="src" path="Queue"/>
 	<classpathentry kind="src" path="Circular_Queue"/>
+	<classpathentry kind="src" path="Reverse_Stack"/>
+	<classpathentry kind="src" path="Queue_LinkedList"/>
+	<classpathentry kind="src" path="Stack_ArrayList"/>
+	<classpathentry kind="src" path="Inheritance_Queue"/>
+	<classpathentry kind="src" path="Linked_List"/>
+	<classpathentry kind="src" path="Tree"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
 		<attributes>
 			<attribute name="module" value="true"/>

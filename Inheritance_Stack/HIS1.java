@@ -68,7 +68,7 @@ public class HIS1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		stack s = new stack();
+		ArrayL.Stack s = new ArrayL.Stack();
 		
 		s.push(10);
 		

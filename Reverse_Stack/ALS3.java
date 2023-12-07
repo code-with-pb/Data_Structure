@@ -1,36 +1,38 @@
 import java.util.Stack;
+import java.util.*;
+import java.io.*;
 
-public class ALS4 {
-	public static void pd(int data, Stack<Integer> s) {
+public class ALS3 {
+	static void add(int data, Stack<Integer>s) {
 		if(s.isEmpty()) {
 			s.push(data);
 			return;
 		}
 		int top = s.pop();
-		pd(data, s);
+		add(data, s);
 		s.push(top);
 	}
-	public static void reverse(Stack<Integer>s) {
+	static void reverse(Stack<Integer>s) {
 		if(s.isEmpty()) {
 			return;
 		}
-		int tp = s.pop();
+		int top = s.pop();
 		reverse(s);
-		pd(tp, s);
+		add(top, s);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Stack s = new Stack();
-		s.push(10);
-		s.push(21);
-		s.push(55);
+		Stack<Integer> s = new Stack<>();
 		
-		pd(25,s);
+		s.push(10);
+		s.push(11);
+		s.push(54);
+		
+		add(14, s);
 		
 		reverse(s);
-		
 		while(!s.isEmpty()) {
-			System.out.print(s.peek());
+			System.out.print(s.peek()+" ");
 			s.pop();
 		}
 	}

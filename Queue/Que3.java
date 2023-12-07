@@ -1,4 +1,3 @@
-import Que2.Queue;
 
 public class Que3 {
 	static class Queue{

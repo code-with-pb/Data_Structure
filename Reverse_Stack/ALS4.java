@@ -1,40 +1,40 @@
 import java.util.Stack;
-import java.util.*;
-import java.io.*;
 
-public class ASL2 {
-	static void add(int data, Stack<Integer>s) {
+public class ALS4 {
+	public static void pushBottom(int data, Stack<Integer> s) {
 		if(s.isEmpty()) {
 			s.push(data);
 			return;
 		}
 		int top = s.pop();
-		add(data, s);
+		pushBottom(data, s);
 		s.push(top);
 	}
-	static void reverse(Stack<Integer>s) {
+	public static void reverse(Stack<Integer> s) {
 		if(s.isEmpty()) {
 			return;
 		}
 		int top = s.pop();
 		reverse(s);
-		add(top, s);
+		pushBottom(top, s);
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Stack<Integer> s = new Stack<>();
 		
-		s.push(10);
-		s.push(11);
-		s.push(54);
+		s.push(1);
+		s.push(3);
+		s.push(8);
 		
-		add(14, s);
+		pushBottom(10, s);
 		
-		reverse(s);
+		reverse(s); 
+		
 		while(!s.isEmpty()) {
-			System.out.print(s.peek()+" ");
+			System.out.println(s.peek());
 			s.pop();
 		}
+
 	}
 
 }
